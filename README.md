@@ -20,7 +20,7 @@ A simple Student Management System developed using Python. This is a menu-driven
 - Variables
 - Lists
 - Dictionaries
-- Loops (`while`, `for`)
+- Loops (`for`)
 - Conditional Statements (`if`, `elif`, `else`)
 - User Input (`input()`)
 
