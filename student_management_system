@@ -1,0 +1,124 @@
+import pandas as pd
+print("\n\nSTUDENT MANAGEMENT SYSTEM\n")
+print("1. Add Student\n2. View All Student\n3. Search Student")  #menu
+print("4. Update Student\n5. Delete Student\n6. Exit\n")         #menu
+
+choice = int(input("Enter Your Choice:"))
+Add_Student = 1
+view_Student = 2
+Search_Student = 3
+Update_student = 4
+Delete_student = 5
+exit_page = 6
+
+#search student
+first_student = 101
+second_student = 102
+third_student = 103
+fourth_student = 104
+fifth_student = 105
+sixth_student =106
+
+#Update student
+update_first_student = "101"
+update_second_student = "102"
+update_third_student = "103"
+update_fourth_student = "104"
+update_fifth_student = "105"
+update_sixth_student ="106"
+
+#view student
+student ={
+        'ID': ['101','102','103','104','105','106'],
+        'Name': ['Ayan','Anayeza','Arshan','Rehan','Shireen','Tasleem'],
+        'Course': ['Pharmacy','MBBS','BCOM','BCOM','BCS','BSC']
+        }
+
+if choice == Add_Student:                     #Add Student
+    id = int(input("Enter Student ID:"))
+    name = input("Enter Name:")
+    age = int(input("Enter Age:"))
+    course = input("Enter Course:")
+    print("\nStudent added Successfully!")
+elif choice == view_Student:                  #View Student
+    df = pd.DataFrame(student)
+    print('\n',df)
+    print("\nTotal Students: 6")
+elif choice == Search_Student:                #Search Student
+    search = int(input("\nEnter Student ID:"))
+    if search == first_student:
+        print("\nStudent Found!\n")
+        print("ID : 101\nName : Ayan Shaikh\nAge:18\nCourse : Pharmacy")
+    elif search == second_student:
+        print("\nStudent Found!\n")
+        print("ID : 102\nName :Anayeza Shaikh\nAge:19\nCourse : MBBS")
+    elif search == third_student:
+        print("\nStudent Found!\n")
+        print("ID : 103\nName :Arshan Shaikh\nAge:20\nCourse : BCOM")
+    elif search == fourth_student:
+        print("\nStudent Found!\n")
+        print("ID : 104\nName :Rehan Shaikh\nAge:21\nCourse : BCOM")
+    elif search == fifth_student:
+        print("\nStudent Found!\n")
+        print("ID : 105\nName :Shireen Shaikh\nAge:22\nCourse : BCS")
+    elif search == sixth_student:
+        print("\nStudent Found!\n")
+        print("ID : 106\nName :Tasleem Shaikh\nAge:23\nCourse : BSC")
+    else :
+        print("\nStudent not found!")
+elif choice == Update_student:              #Update Student
+    student_id = input("Enter Student ID :")
+    if student_id == update_first_student:
+        print("current info\nName : Ayan Shaikh\nAge:18\nCourse : Pharmacy")
+        new = input("new name:"),input("new course:")
+        print("Student updated successfully")
+    elif student_id == update_second_student:
+        print("current info\nName :Anayeza Shaikh\nAge:19\nCourse : MBBS")
+        new = input("new name:"),input("new course:")
+        print("Student updated successfully")
+    elif student_id == update_third_student:
+        print("current info\nName :Arshan Shaikh\nAge:20\nCourse : BCOM")
+        new = input("new name:"),input("new course:")
+        print("Student updated successfully")
+    elif student_id == update_fourth_student:
+        print("current info\nName :Rehan Shaikh\nAge:21\nCourse : BCOM")
+        new = input("new name:"),input("new course:")
+        print("Student updated successfully")
+    elif student_id == update_fifth_student:
+        print("current info\nName :Shireen Shaikh\nAge:22\nCourse : BCS")
+        new = input("new name:"),input("new course:")
+        print("Student updated successfully")
+    elif student_id == update_sixth_student:
+        print("current info\nName :Tasleem Shaikh\nAge:23\nCourse : BSC")
+        new = input("new name:"),input("new course:")
+        print("Student updated successfully")
+    else:
+        print("\nStudent not found!")
+elif choice == Delete_student:           #delete Student
+    ask = input("\nEnter Student ID:")
+    again = input("Are you sure? (Y/N):")
+    yes = again
+    if again == yes:
+        print("Student deleted Successfully!")
+    else:
+        print("Student not deleted")
+elif choice == exit_page:
+    print("Thank you for using Student Management System")
+
+
+    
+
+
+    
+             
+
+        
+
+
+        
+        
+    
+
+
+
+    
